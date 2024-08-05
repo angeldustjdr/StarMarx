@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cimm0oag2n8jp"]
+
+[ext_resource type="FontFile" uid="uid://dpf7sxiuo286" path="res://ASCII_graphical_engine/font/clacon2.ttf" id="1_loqiv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ig4ca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_445po"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbxsf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6v28d"]
+
+[resource]
+default_font = ExtResource("1_loqiv")
+default_font_size = 16
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 0)
+Button/constants/h_separation = 0
+Button/styles/focus = SubResource("StyleBoxEmpty_ig4ca")
+Button/styles/hover = SubResource("StyleBoxFlat_445po")
+Button/styles/normal = SubResource("StyleBoxFlat_dbxsf")
+Button/styles/pressed = SubResource("StyleBoxEmpty_6v28d")
+Label/constants/line_spacing = 0
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0

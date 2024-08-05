@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4eibl4etu1gs"]
+
+[ext_resource type="Script" path="res://ASCII_graphical_engine/main_screen/main_screen.gd" id="1_82epb"]
+[ext_resource type="PackedScene" uid="uid://cq7vv2dh0gvnv" path="res://ASCII_graphical_engine/main_screen/up_hud.tscn" id="1_qla66"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_82epb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+
+[node name="UpHUD" parent="." instance=ExtResource("1_qla66")]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 256.0
+offset_right = 352.0
+offset_bottom = 272.0
+text = "PRESS ME"

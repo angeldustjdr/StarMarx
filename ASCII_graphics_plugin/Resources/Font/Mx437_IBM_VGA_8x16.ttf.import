@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://jhdjv388k8ag"
-path="res://.godot/imported/Mx437_IBM_VGA_8x16.ttf-86a3de74f94a63c16a9f93022fb8b9c8.fontdata"
+path="res://.godot/imported/Mx437_IBM_VGA_8x16.ttf-595925f64445050d49b8d1b1dfe883d1.fontdata"
 
 [deps]
 
-source_file="res://ASCII_graphical_engine/font/Mx437_IBM_VGA_8x16.ttf"
-dest_files=["res://.godot/imported/Mx437_IBM_VGA_8x16.ttf-86a3de74f94a63c16a9f93022fb8b9c8.fontdata"]
+source_file="res://ASCII_graphics_plugin/Resources/Font/Mx437_IBM_VGA_8x16.ttf"
+dest_files=["res://.godot/imported/Mx437_IBM_VGA_8x16.ttf-595925f64445050d49b8d1b1dfe883d1.fontdata"]
 
 [params]
 

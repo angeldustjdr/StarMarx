@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Constants="*res://ASCII_graphical_engine/constants.gd"
+AsciiGraphicsPlugin="*res://ASCII_graphics_plugin/ascii_graphics_plugin.gd"
 
 [display]
 
@@ -35,7 +35,7 @@ import/blender/enabled=false
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false
-theme/custom="res://ASCII_graphical_engine/ascii_theme.tres"
+theme/custom="res://ASCII_graphics_plugin/Resources/Godot/Themes/ascii_theme.tres"
 
 [rendering]
 

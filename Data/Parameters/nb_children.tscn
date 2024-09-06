@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://nj3dhu53qail"]
+
+[ext_resource type="Script" path="res://Data/Parameters/nbchildren_parameter.gd" id="1_81k8k"]
+
+[node name="NbChildren" type="Node2D"]
+script = ExtResource("1_81k8k")

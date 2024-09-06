@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fnp67kr6jaat"]
+
+[ext_resource type="Script" path="res://Data/Groups/age_group.gd" id="1_ax66f"]
+
+[node name="AgeGroup" type="Node2D"]
+script = ExtResource("1_ax66f")
+group_name = "Age Group"
+list_of_subgroup = ["Minor", "18-25", "26-35", "36-45", "46-55", "56-65", "66-75", "Over 76"]

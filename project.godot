@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 AsciiGraphicsPlugin="*res://ASCII_graphics_plugin/ascii_graphics_plugin.gd"
+SignalHub="*res://Simulation/signal_hub.gd"
 
 [display]
 

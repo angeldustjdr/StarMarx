@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddi16em1c40qy"]
+
+[ext_resource type="Script" path="res://Data/Parameters/name_parameter.gd" id="1_eftdw"]
+
+[node name="Name" type="Node2D"]
+script = ExtResource("1_eftdw")

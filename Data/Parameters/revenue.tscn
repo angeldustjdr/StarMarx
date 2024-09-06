@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://isu4yx3pkq66"]
+
+[ext_resource type="Script" path="res://Data/Parameters/revenue_parameter.gd" id="1_bdyrf"]
+
+[node name="Revenue" type="Node2D"]
+script = ExtResource("1_bdyrf")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs6md6np57xqw"]
+
+[ext_resource type="Script" path="res://Data/Parameters/gender_parameter.gd" id="1_p37l6"]
+
+[node name="Gender" type="Node2D"]
+script = ExtResource("1_p37l6")

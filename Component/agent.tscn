@@ -1,0 +1,31 @@
+[gd_scene load_steps=10 format=3 uid="uid://j8a21qjb3256"]
+
+[ext_resource type="Script" path="res://Component/agent.gd" id="1_p6bnq"]
+[ext_resource type="PackedScene" uid="uid://ddi16em1c40qy" path="res://Data/Parameters/name.tscn" id="2_1nddf"]
+[ext_resource type="PackedScene" uid="uid://cyy5unjmc74ao" path="res://Data/Parameters/age.tscn" id="3_138qe"]
+[ext_resource type="Script" path="res://Data/Parameters/age_parameter.gd" id="4_g14lu"]
+[ext_resource type="PackedScene" uid="uid://wekef88jg5lr" path="res://Data/Parameters/occupation.tscn" id="5_qrjwe"]
+[ext_resource type="PackedScene" uid="uid://cs6md6np57xqw" path="res://Data/Parameters/gender.tscn" id="6_dnpnm"]
+[ext_resource type="PackedScene" uid="uid://isu4yx3pkq66" path="res://Data/Parameters/revenue.tscn" id="7_jinu6"]
+[ext_resource type="PackedScene" uid="uid://nj3dhu53qail" path="res://Data/Parameters/nb_children.tscn" id="8_8a8e5"]
+[ext_resource type="PackedScene" uid="uid://dvssfda66srwy" path="res://Data/Parameters/city.tscn" id="9_2lejo"]
+
+[node name="Agent" type="Node2D"]
+script = ExtResource("1_p6bnq")
+
+[node name="Parameters" type="Node2D" parent="."]
+
+[node name="Name" parent="Parameters" instance=ExtResource("2_1nddf")]
+
+[node name="Age" parent="Parameters" instance=ExtResource("3_138qe")]
+script = ExtResource("4_g14lu")
+
+[node name="Occupation" parent="Parameters" instance=ExtResource("5_qrjwe")]
+
+[node name="Gender" parent="Parameters" instance=ExtResource("6_dnpnm")]
+
+[node name="Revenue" parent="Parameters" instance=ExtResource("7_jinu6")]
+
+[node name="NbChildren" parent="Parameters" instance=ExtResource("8_8a8e5")]
+
+[node name="City" parent="Parameters" instance=ExtResource("9_2lejo")]

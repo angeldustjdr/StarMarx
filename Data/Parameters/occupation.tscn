@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wekef88jg5lr"]
+
+[ext_resource type="Script" path="res://Data/Parameters/occupation_parameter.gd" id="1_iep6d"]
+
+[node name="Occupation" type="Node2D"]
+script = ExtResource("1_iep6d")

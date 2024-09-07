@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c383qtcslsrpn"]
+
+[ext_resource type="Script" path="res://Data/Parameters/tradition_parameter.gd" id="1_vxrm5"]
+
+[node name="Tradition" type="Node2D"]
+script = ExtResource("1_vxrm5")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://j8a21qjb3256"]
+[gd_scene load_steps=11 format=3 uid="uid://j8a21qjb3256"]
 
 [ext_resource type="Script" path="res://Component/agent.gd" id="1_p6bnq"]
 [ext_resource type="PackedScene" uid="uid://ddi16em1c40qy" path="res://Data/Parameters/name.tscn" id="2_1nddf"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://isu4yx3pkq66" path="res://Data/Parameters/revenue.tscn" id="7_jinu6"]
 [ext_resource type="PackedScene" uid="uid://nj3dhu53qail" path="res://Data/Parameters/nb_children.tscn" id="8_8a8e5"]
 [ext_resource type="PackedScene" uid="uid://dvssfda66srwy" path="res://Data/Parameters/city.tscn" id="9_2lejo"]
+[ext_resource type="PackedScene" uid="uid://c383qtcslsrpn" path="res://Data/Parameters/tradition.tscn" id="10_4wkh8"]
 
 [node name="Agent" type="Node2D"]
 script = ExtResource("1_p6bnq")
@@ -29,3 +30,5 @@ script = ExtResource("4_g14lu")
 [node name="NbChildren" parent="Parameters" instance=ExtResource("8_8a8e5")]
 
 [node name="City" parent="Parameters" instance=ExtResource("9_2lejo")]
+
+[node name="Tradition" parent="Parameters" instance=ExtResource("10_4wkh8")]

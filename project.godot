@@ -22,6 +22,10 @@ config/icon="res://icon.svg"
 AsciiGraphicsPlugin="*res://ASCII_graphics_plugin/ascii_graphics_plugin.gd"
 SignalHub="*res://Simulation/signal_hub.gd"
 
+[debug]
+
+file_logging/enable_file_logging=true
+
 [display]
 
 window/size/viewport_width=640

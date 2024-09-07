@@ -1,12 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvclffetkr68t"]
+[gd_scene load_steps=6 format=3 uid="uid://dvclffetkr68t"]
 
 [ext_resource type="Script" path="res://Simulation/Simulation.gd" id="1_quaoh"]
 [ext_resource type="Script" path="res://Simulation/AgentManager.gd" id="2_3gfxg"]
 [ext_resource type="Script" path="res://Simulation/GroupManager.gd" id="3_kypuq"]
 [ext_resource type="PackedScene" uid="uid://fnp67kr6jaat" path="res://Data/Groups/age_group.tscn" id="4_2dyd8"]
 
+[sub_resource type="Curve" id="Curve_yuuof"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Simulation" type="Node2D"]
 script = ExtResource("1_quaoh")
+
+[node name="SimulationTick" type="Timer" parent="."]
+wait_time = 0.5
 
 [node name="AgentManager" type="Node2D" parent="."]
 script = ExtResource("2_3gfxg")
@@ -15,3 +22,6 @@ script = ExtResource("2_3gfxg")
 script = ExtResource("3_kypuq")
 
 [node name="AgeGroup" parent="GroupManager" instance=ExtResource("4_2dyd8")]
+age_effect_on_tradition = SubResource("Curve_yuuof")
+
+[connection signal="timeout" from="SimulationTick" to="." method="_on_simulation_tick_timeout"]

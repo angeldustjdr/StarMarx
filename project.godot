@@ -8,8 +8,25 @@
 
 config_version=5
 
+[GodotASCIIToolKit]
+
+scene_after_ascii_splash_scene="res://addons/GodotASCIIToolKit/Splash/ascii_godot_splash_screen.tscn"
+tile_size_px_x=8
+tile_size_px_y=16
+
 [application]
 
 config/name="StarMarx"
+run/main_scene="uid://defo5a2jxgjrg"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GodotASCIIToolKit/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://defo5a2jxgjrg"]
+
+[ext_resource type="Script" uid="uid://cn5o25raeovua" path="res://main.gd" id="1_glv2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glv2v"]
+size = Vector2(1194, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu6xs"]
+size = Vector2(667, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0du0"]
+size = Vector2(11, 678)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm0pq"]
+size = Vector2(1168, 9)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_glv2v")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Macro_Simulation" type="Node2D" parent="."]
+
+[node name="Meso_Simulation" type="Node2D" parent="."]
+
+[node name="Micro_Simulation" type="Node2D" parent="."]
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2(569, -5.5)
+shape = SubResource("RectangleShape2D_glv2v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
+position = Vector2(645, 177)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_uu6xs")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-6.5, 324)
+shape = SubResource("RectangleShape2D_r0du0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Borders"]
+position = Vector2(281, 373)
+shape = SubResource("RectangleShape2D_cm0pq")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

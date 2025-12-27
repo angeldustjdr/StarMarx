@@ -12,7 +12,14 @@ func  init(Id,spawn_rect) -> void:
 	self.Attributes["Id"] = Id
 	# Generate personal info
 	self.Attributes["Name"] = NAMES.noms.pick_random() + " " + NAMES.prenoms.pick_random()
-	self.Attributes["Age"] = randi_range(18,99)
+	self.Attributes["Age"] = 0
+	var random = RandomNumberGenerator.new()
+	while self.Attributes["Age"] < 18 : self.Attributes["Age"] = Insee.age_list[random.rand_weighted(Insee.age_weight)]
+	if randf() < Insee.proportion_non_binary : 
+		self.Attributes["Gender"] = "N"
+	else : 
+		if randf() < Insee.proportion_femme : self.Attributes["Gender"] = "F"
+		else : self.Attributes["Gender"] = "M"
 	# Postional information
 	self.position.x = int(randf()*spawn_rect[0] + DisplayServer.window_get_size()[0] - spawn_rect[0])
 	self.position.y = int(randf()*spawn_rect[1])

@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://defo5a2jxgjrg"]
+[gd_scene load_steps=10 format=3 uid="uid://defo5a2jxgjrg"]
 
 [ext_resource type="Script" uid="uid://cn5o25raeovua" path="res://main.gd" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://c2o5wu8t7gpha" path="res://addons/GodotASCIIToolKit/Controls/TextBoxes/ascii_titled_box.gd" id="2_uu6xs"]
 [ext_resource type="Script" uid="uid://bt57yxrfjmqwg" path="res://UI/agent_info.gd" id="3_r0du0"]
+[ext_resource type="Theme" uid="uid://dismfahxdsqkk" path="res://addons/GodotASCIIToolKit/Resources/Godot/Themes/ascii_label_theme.tres" id="4_fos0i"]
+[ext_resource type="Script" uid="uid://b0fxeaxf1fetk" path="res://addons/GodotASCIIToolKit/Controls/ascii_label.gd" id="5_3dxm6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glv2v"]
 size = Vector2(1054, 9)
@@ -94,5 +96,16 @@ themes_names = Array[String](["simple", "double", "thick", "sharp"])
 box_type = 0
 box_chars = "│─┌┐└┘"
 metadata/_custom_type_script = "uid://c2o5wu8t7gpha"
+
+[node name="ASCIILabel" type="Label" parent="UI/AgentInfo/ASCIITitleBox"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 128.0
+theme = ExtResource("4_fos0i")
+theme_override_constants/line_spacing = 0
+script = ExtResource("5_3dxm6")
+metadata/_custom_type_script = "uid://b0fxeaxf1fetk"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

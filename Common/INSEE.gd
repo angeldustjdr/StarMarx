@@ -2,7 +2,7 @@ extends Node
 
 ##########################################
 # Gestion Age
-var proportion_non_binary = 0.05
+var proportion_non_binary = 0.02
 var proportion_femme
 var age_list
 var age_weight
@@ -21,11 +21,11 @@ func pyramide_age(fileName):
 			else : F += float(data[3])
 			age_proportion[int(data[2])] = float(data[3])
 			pop_totale += float(data[3])
-	var age_weight = []
-	for i in age_proportion.keys() : age_weight.append(age_proportion[i]/pop_totale)
+	var age_distribution = []
+	for i in age_proportion.keys() : age_distribution.append(age_proportion[i]/pop_totale)
 	M /= pop_totale
 	F /= pop_totale
-	return [F, age_proportion.keys(),age_weight]
+	return [F, age_proportion.keys(),age_distribution]
 	
 ##########################################
 # Initialisation des donnees

@@ -1,9 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgegbpvapohlb"]
+[gd_scene load_steps=4 format=3 uid="uid://cgegbpvapohlb"]
 
 [ext_resource type="Script" uid="uid://bracfa6a5uvps" path="res://Micro_Simulation/Agent/agent.gd" id="1_k18j1"]
 [ext_resource type="Texture2D" uid="uid://uw2f5l35sl3t" path="res://Micro_Simulation/Agent/Agent_Sprite.png" id="2_wo0w1"]
-[ext_resource type="Theme" uid="uid://dismfahxdsqkk" path="res://addons/GodotASCIIToolKit/Resources/Godot/Themes/ascii_label_theme.tres" id="3_h5qb1"]
-[ext_resource type="Script" uid="uid://b0fxeaxf1fetk" path="res://addons/GodotASCIIToolKit/Controls/ascii_label.gd" id="4_1afyr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wo0w1"]
 size = Vector2(12, 13)
@@ -21,19 +19,6 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_wo0w1")
-
-[node name="ASCIILabel" type="Label" parent="."]
-visible = false
-offset_left = -24.0
-offset_top = -24.0
-offset_right = 24.0
-offset_bottom = -8.0
-theme = ExtResource("3_h5qb1")
-theme_override_constants/line_spacing = 0
-text = "toto"
-horizontal_alignment = 1
-script = ExtResource("4_1afyr")
-metadata/_custom_type_script = "uid://b0fxeaxf1fetk"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

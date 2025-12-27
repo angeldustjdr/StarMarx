@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const NAMES = preload("res://Micro_Simulation/Agent/NAMES.gd")
+const NAMES = preload("res://Common/NAMES.gd")
 
 var length = 50
 var Attributes : Dictionary
@@ -10,8 +10,9 @@ enum STATUS {STOP,ROAM}
 func  init(Id,spawn_rect) -> void:
 	# Identification
 	self.Attributes["Id"] = Id
+	# Generate personal info
 	self.Attributes["Name"] = NAMES.noms.pick_random() + " " + NAMES.prenoms.pick_random()
-	$ASCIILabel.text = str(self.Attributes["Name"])
+	self.Attributes["Age"] = randi_range(18,99)
 	# Postional information
 	self.position.x = int(randf()*spawn_rect[0] + DisplayServer.window_get_size()[0] - spawn_rect[0])
 	self.position.y = int(randf()*spawn_rect[1])
@@ -31,10 +32,10 @@ func _on_move_timer_timeout() -> void:
 
 func _on_mouse_entered() -> void:
 	self.Attributes["Status"] = STATUS.STOP
-	$ASCIILabel.visible = true
 	self.modulate=Color(1.0, 0.125, 0.086, 1.0)
+	Broadcast.change_selected.emit(self)
 	
 func _on_mouse_exited() -> void:
 	self.Attributes["Status"] = STATUS.ROAM
-	$ASCIILabel.visible = false
 	self.modulate=Color("#ffffff")
+	Broadcast.change_selected.emit(null)
